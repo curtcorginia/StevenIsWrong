@@ -1,3 +1,18 @@
+const randomButton = document.querySelector('.random');
+
+//random dog image
+//click and change
+randomButton.addEventListener('click', getRandomDoggo);
+
+function getRandomDoggo(){
+	console.log("get random doggo");
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(checkStatus)
+    .then(response => response.json())
+    .then(data => handleData(data))
+    .catch(error => notifyUser(error))
+}
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -16,7 +31,8 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 25,
+
+    var twentyFiveMinutes = 60 * 25,
         display = document.querySelector('#time');
-    startTimer(fiveMinutes, display);
+    startTimer(twentyFiveMinutes, display);
 };
