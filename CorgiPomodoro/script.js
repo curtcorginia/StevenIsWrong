@@ -13,6 +13,26 @@ function getRandomDoggo(){
     .catch(error => notifyUser(error))
 }
 
+//HELPER FUNCTIONS
+//checkStatus
+function checkStatus(response){
+  if(response.ok){
+    return Promise.resolve(response);
+  }else{
+    return Promise.reject(new Error(response.statusText));
+  }
+}
+
+function notifyUser(error){
+  const errorContainer = document.querySelector('.alert');
+  errorContainer.innerHTML = `There was an error with the server request (${error}). <br> Click the button again.`;
+  errorContainer.style.display = 'block';
+  setTimeout(()=>{
+    errorContainer.innerHTML = '';
+    errorContainer.style.display ='none';
+  },4000)
+}
+
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
