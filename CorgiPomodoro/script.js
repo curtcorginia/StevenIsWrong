@@ -1,10 +1,8 @@
 //Heavily taken from open source codepen submission by Kostas https://codepen.io/kkoutoup/pen/wjZXPw
 
 const randomButton = document.querySelector('.random');
+var isWork = false;
 
-//random dog image
-//click and change
-//randomButton.addEventListener('click', getRandomCorgi);
 getRandomCorgi();
 
 function getRandomCorgi(){
@@ -16,8 +14,6 @@ function getRandomCorgi(){
     .catch(error => notifyUser(error))
 }
 
-
-
 //handleData
 function handleData(data){
   let url = data.message;
@@ -25,8 +21,6 @@ function handleData(data){
   let regex = /https:\/\/images\.dog\.ceo\/breeds\/(\w+\-?\w+)\/.+/g;
   //let breedName = regex.exec(url);
   let breedName = 'corgi';
-  //document.getElementById('randomImageContainer').innerHTML = `<img alt="random image of a ${fixBreed(breedName[1])}" src='${url}'/>`;
-  //document.querySelector('.dogInfo').innerHTML = `<p class="h5">Random image of a ${fixBreed(breedName[1])}</p>`;
 
   document.getElementById('randomImageContainer').innerHTML = `<img alt="random image of a corgi" src='${url}'/>`;
   document.querySelector('.dogInfo').innerHTML = `<p class="h5">Random image of a corgi</p>`;
@@ -35,20 +29,6 @@ function handleData(data){
 //fixBreed
 function fixBreed(breedName){
   
-  /*
-  if(breedName === 'germanshepherd'){
-    return 'German Shepherd';
-  }else if(breedName === 'mexicanhairless'){
-    return 'Mexican Hairless';
-  }else if(breedName === 'stbernard'){
-    return 'St. Bernard';
-  }else if(breedName === "african"){
-    return 'African Wild Dog';
-  }else if(breedName === 'bullterrier'){
-    return 'Bull Terier';
-  }
-
-  */
   breedName === 'corgi';
   return capitalize(breedName);
 }
@@ -92,18 +72,32 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
-        if (--timer < 0) {
+        if (--timer < 0) 
+        {
+            
         	var audio = new Audio('Dog Woof-SoundBible.com.mp3');
-audio.play();
-        	
-            timer = duration;
+                    audio.play();
+            if(isWork == false)
+            {
+        	    //timer = duration;
+        	    timer = 25 * 60;
+        	    isWork = true;
+        	    getRandomCorgi();
+
+            }
+            else
+            {
+            	timer = 5 * 60;
+            	isWork = false;
+            	getRandomCorgi();
+            }
         }
     }, 1000);
 }
 
 window.onload = function () {
 
-    var twentyFiveMinutes = 60 * 1,
+    var twentyFiveMinutes = 60 * 25,
         display = document.querySelector('#time');
     startTimer(twentyFiveMinutes, display);
 };
