@@ -1,12 +1,14 @@
+//Heavily taken from open source codepen submission by Kostas https://codepen.io/kkoutoup/pen/wjZXPw
+
 const randomButton = document.querySelector('.random');
 
 //random dog image
 //click and change
-randomButton.addEventListener('click', getRandomDoggo);
+//randomButton.addEventListener('click', getRandomCorgi);
+getRandomCorgi();
 
-function getRandomDoggo(){
-	console.log("get random doggo");
-  //fetch('https://dog.ceo/api/breeds/image/random')
+function getRandomCorgi(){
+	console.log("Random corgi of the day");
   fetch('https://dog.ceo/api/breed/Pembroke/images/random')
     .then(checkStatus)
     .then(response => response.json())
@@ -14,14 +16,7 @@ function getRandomDoggo(){
     .catch(error => notifyUser(error))
 }
 
-//populate List
-function populateList(){
-  fetch('https://dog.ceo/api/breeds/list/all')
-    .then(checkStatus)
-    .then(response => response.json())
-    .then(data => createListItems(data.message))
-    .catch(error => notifyUser(error))
-}
+
 
 //handleData
 function handleData(data){
@@ -98,6 +93,9 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
+        	var audio = new Audio('Dog Woof-SoundBible.com.mp3');
+audio.play();
+        	
             timer = duration;
         }
     }, 1000);
@@ -105,7 +103,7 @@ function startTimer(duration, display) {
 
 window.onload = function () {
 
-    var twentyFiveMinutes = 60 * 25,
+    var twentyFiveMinutes = 60 * 1,
         display = document.querySelector('#time');
     startTimer(twentyFiveMinutes, display);
 };
