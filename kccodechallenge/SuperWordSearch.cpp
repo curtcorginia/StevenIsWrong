@@ -76,17 +76,16 @@ int main()
     int matchEndRow = 0;
     int matchStartCol = 0;
     int matchEndCol = 0;
-	for(int i = 0; i < nRowValue; i++) //for every row
+    for(int x = 0; x < searchLines.size(); x++) //for every word in the word list vector
 	{
-		for(int j = 0; j < mColValue; j++) //for every column
+		bool wordMatches = false;
+		std::cout << "\nCANDIDATE WORD: " << searchLines[x];
+		for(int i = 0; i < nRowValue; i++) //for every row
 		{
-			//std::cout << "\nCandidate char: " << wordMatrix[i][j];
-            //x is for the word
-            bool wordMatches = false;
-			for(int x = 0; x < searchLines.size(); x++) //for every word in the word list vector
+			for(int j = 0; j < mColValue; j++) //for every column
 			{
-				
-				std::cout << "\nCANDIDATE WORD: " << searchLines[x];
+				//std::cout << "\nCandidate char: " << wordMatrix[i][j];
+            	//x is for the word
 				
 				for(int dir = 0; dir < 8; dir++) //Geeksforgeeks
 				{
@@ -157,19 +156,22 @@ int main()
 				std::cout << "\nThe word does not match.  Go on to the next one";
 				
 			}
-			//endloop:
-			if(wordMatches == true)
-			{
-				//std::cout << "\nOkay so we have a match on word " << searchLines[x];
-				std::cout << "\nIt's start " << matchStartRow << " " << matchStartCol << "\nand end " << matchEndRow << " " << matchEndCol;
-			}
-			else
-			{
-				//std::cout << "\nNo match for word" << searchLines[x];
-				std::cout << "\nNOT FOUND"; //just keep going
-			}
+			
 			
 		}
+		//endloop:
+		if(wordMatches == true)
+		{
+			std::cout << "\nOkay so we have a match on word " << searchLines[x];
+			std::cout << "\nIt's start " << matchStartRow << " " << matchStartCol << "\nand end " << matchEndRow << " " << matchEndCol;
+			std::cout << "(" << matchStartRow << "," << matchStartCol << ")(" << matchEndRow << "," << matchEndCol << ")";
+		}
+		else
+		{
+			std::cout << "\nNo match for word" << searchLines[x];
+			std::cout << "\nNOT FOUND"; //just keep going
+		}
+
 	}
     
 
