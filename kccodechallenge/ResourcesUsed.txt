@@ -1,0 +1,7 @@
+Challenge 1:
+
+*https://stackoverflow.com/questions/7868936/read-file-line-by-line-using-ifstream-in-c
+
+*https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
+
+^This contained code for a word search without wraparound.  I mentioned in comments which parts were taken from them; they used two 1D arrays of length eight to represent directions, and they "extended" strings in every direction
