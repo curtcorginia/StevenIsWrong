@@ -7,8 +7,8 @@
 int main()
 {
 	//1. Handle file parsing.  
-    std::ifstream infile("inputtest1.txt");
-    //std::ifstream infile("WRAPAROUND.txt");
+    //std::ifstream infile("inputtest1.txt");
+    std::ifstream infile("WRAPAROUND.txt");
     
     std::string line;
     int nRowValue = 0;
@@ -33,13 +33,20 @@ int main()
     //Done filling out the word matrix
     std::getline(infile, line);
     bool isWrapAround = false;
-    if(line.compare("NO_WRAP"))
+    std::cout << "\nVALUE OF LINE: " << line;
+    line.erase(std::find(line.begin(), line.end(), '\0'), line.end());
+    line.erase(std::find(line.begin(), line.end(), ' '), line.end());
+    std::cout << "\nVALUE OF LINE: " << line;
+    if(line == "NO_WRAP")
+    //if(line.at(0) == "N" && line.at(1) == "O")
     {
+    	std::cout << "\nYOU'RE NOT IN WRAPAROUND MODE";
     	isWrapAround = false;
     }
-    else if(line.compare("WRAP"))
-
+    else if(line == "WRAP")
+    //else if(line.at(0) == "W" && line.at(1) == "R")
     {
+    	std::cout << "\nYOU'RE IN WRAPAROUND MODE";
     	isWrapAround = true;
     }
     else
@@ -92,6 +99,7 @@ int main()
                     int y = 0; 
     				if(searchLines[x].at(0) == wordMatrix[i][j]) //if the first letter doesn't match, it's not a candidate
     				{
+    					std::cout<< "\nSTARTING CANDIDATE: ROW " << i << " col " << j << " letter " << wordMatrix[i][j];
     					int len = searchLines[x].size();
     					int startingRow = i;
     					int startingCol = j;
@@ -106,17 +114,26 @@ int main()
 				            {
 				            	if(!isWrapAround)
 				            	{
+				            		std::cout << "\nIT'S NOT WRAP AROUND; BREAK FROM THIS";
 				            		break; 
 				            	}
-				            	/*
+				            	
 				            	else
 				            	{
 				            		if(curRow == i && curCol == j) //we've wrapped right back to the start
 				            		{
-				            			//std::cout << "We've reached the starting point of row " << i << " col " << j; 
+				            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
+				            			std::cout << "\nChecking to see if we're done with a wraparound guy";
+				            			std::cout << "\nValue of y: " << y;
+				            			std::cout << "\nValue of len: " << len;
+				            			std::cout << "\nWord candidate: " << searchLines[x];
+				            			if(y + 1 == len)
+				            			{
+				            				std::cout << "\nWRAP AROUND MATCH FOUND!!";
+				            			}
 				            			break;
 				            		}
-
+                                    std::cout << "\nAbout to apply wraparound on row " << curRow << " col " << curCol;
 				            		if(curRow >= nRowValue)
 				            		{
 				            			//std::cout << "\ncurRow was " << curRow;
@@ -124,25 +141,49 @@ int main()
 				            			//std::cout << "\ncurRow just wrapped around to " << curRow;
 				            		}
 
-				            		//if(curRow < )
+				            		if(curRow < 0)
+				            		{
+				            			//std::cout << "\ncurRow was " << curRow;
+				            			curRow = nRowValue + (curRow % nRowValue);
+				            			//std::cout << "\ncurRow just wrapped around to " << curRow;
+				            		}
+
+				            		if(curCol >= mColValue)
+				            		{
+				            			//std::cout << "\ncurCol was " << curCol;
+				            			curCol = curCol % mColValue;
+				            			//std::cout << "\ncurCol just wrapped around to " << curCol;
+				            		}
+
+				            		if(curCol < 0)
+				            		{
+				            			//std::cout << "\ncurColwas " << curCol;
+				            			curCol = mColValue + (curCol % mColValue);
+				            			//std::cout << "\ncurCol just wrapped around to " << curCol;
+				            		}
+				            		std::cout << "\nDone with wraparound. New value is row " << curRow << " col " << curCol;
 				            	}
-				            	*/
+				            	
 				                
 				            }
 				  
 				            // If not matched,  break 
 				            if (wordMatrix[curRow][curCol] != searchLines[x].at(y)) 
 				            {
+				            	std::cout << "\nTouched char " << wordMatrix[curRow][curCol] << " AND IT'S NOT A MATCH";
 				                break; 
 				            }
 				  
 				            //  Moving in particular direction 
 				            if(y + 1 != len)
 				            {
+				            	std::cout << "\nThis is good.  Keep going.";
 				                curRow += xArr[dir], curCol += yArr[dir]; //geeksforgeeks line
+				                std::cout << "\nWe're about to continue on to checking out row " << curRow << " col " << curCol;
 				            }
 				            if(y + 1 == len)
 				            {
+				            	std::cout << "\nMATCH FOUND.  ";
 				            	matchStartRow = startingRow;
 				            	matchStartCol = startingCol;
 				            	matchEndRow = curRow;
