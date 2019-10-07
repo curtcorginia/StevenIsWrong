@@ -120,6 +120,9 @@ int main()
 				            	
 				            	else
 				            	{
+				            		
+				            		
+									/*
 				            		if(curRow == i && curCol == j) //we've wrapped right back to the start
 				            		{
 				            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
@@ -133,6 +136,7 @@ int main()
 				            			}
 				            			break;
 				            		}
+				            		*/
                                     std::cout << "\nAbout to apply wraparound on row " << curRow << " col " << curCol;
 				            		if(curRow >= nRowValue)
 				            		{
@@ -178,12 +182,31 @@ int main()
 				            if(y + 1 != len)
 				            {
 				            	std::cout << "\nThis is good.  Keep going.";
+
 				                curRow += xArr[dir], curCol += yArr[dir]; //geeksforgeeks line
+				                std::cout << "\nValue if curRow is " << curRow << "\nValue of curCol is " << curCol << " i is " << i << " j is " << j;
+				                if(curRow == i && curCol == j)
+				                {
+				            		
+				            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
+				            			std::cout << "\nChecking to see if we're done with a wraparound guy";
+				            			std::cout << "\nValue of y: " << y;
+				            			std::cout << "\nValue of len: " << len;
+				            			std::cout << "\nWord candidate: " << searchLines[x];
+				            			std::cout << "\nMOVE TO THE NEXT WORD!!";
+				            			matchStartRow = startingRow;
+				            			matchStartCol = startingCol;
+				            			matchEndRow = curRow;
+				            			matchEndCol = curCol;
+				            			wordMatches = true;
+				            			break;
+				            			
+				                }
 				                std::cout << "\nWe're about to continue on to checking out row " << curRow << " col " << curCol;
 				            }
 				            if(y + 1 == len)
 				            {
-				            	std::cout << "\nMATCH FOUND.  ";
+				            	std::cout << "\nMATCH FOUND.  Size is " << len;
 				            	matchStartRow = startingRow;
 				            	matchStartCol = startingCol;
 				            	matchEndRow = curRow;
