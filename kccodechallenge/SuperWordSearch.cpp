@@ -138,6 +138,8 @@ int main()
 				            		}
 				            		*/
                                     std::cout << "\nAbout to apply wraparound on row " << curRow << " col " << curCol;
+                                    //Mod formulas
+                                    //https://codereview.stackexchange.com/questions/57923/index-into-array-as-if-it-is-circular
 				            		if(curRow >= nRowValue)
 				            		{
 				            			//std::cout << "\ncurRow was " << curRow;
@@ -182,24 +184,37 @@ int main()
 				            if(y + 1 != len)
 				            {
 				            	std::cout << "\nThis is good.  Keep going.";
-
+				            	
 				                curRow += xArr[dir], curCol += yArr[dir]; //geeksforgeeks line
-				                std::cout << "\nValue if curRow is " << curRow << "\nValue of curCol is " << curCol << " i is " << i << " j is " << j;
+				                /*
+				                if(startingRow == curRow && startingCol == curCol) //TODO: Make sure we can go one past
+				            	{
+				            		std::cout << "\nSPECIAL CASE. REJECT.  START AND END COORDINATE IS THE SAME";
+				            		break;
+				            	}
+				            	*/
+				                std::cout << "\nValue of curRow is " << curRow << " Value of curCol is " << curCol << " i is " << i << " j is " << j;
 				                if(curRow == i && curCol == j)
 				                {
-				            		
-				            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
-				            			std::cout << "\nChecking to see if we're done with a wraparound guy";
-				            			std::cout << "\nValue of y: " << y;
-				            			std::cout << "\nValue of len: " << len;
-				            			std::cout << "\nWord candidate: " << searchLines[x];
-				            			std::cout << "\nMOVE TO THE NEXT WORD!!";
-				            			matchStartRow = startingRow;
-				            			matchStartCol = startingCol;
-				            			matchEndRow = curRow;
-				            			matchEndCol = curCol;
-				            			wordMatches = true;
+				                	/*
+				            		if(startingRow == curRow && startingCol == curCol)
+				            		{
+				            			std::cout << "\nSPECIAL CASE. REJECT.  START AND END COORDINATE IS THE SAME";
 				            			break;
+				            		}
+				            		*/
+			            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
+			            			std::cout << "\nChecking to see if we're done with a wraparound guy";
+			            			std::cout << "\nValue of y: " << y;
+			            			std::cout << "\nValue of len: " << len;
+			            			std::cout << "\nWord candidate: " << searchLines[x];
+			            			std::cout << "\nMOVE TO THE NEXT WORD!!";
+			            			matchStartRow = startingRow;
+			            			matchStartCol = startingCol;
+			            			matchEndRow = curRow - xArr[dir];
+			            			matchEndCol = curCol - yArr[dir];
+			            			wordMatches = true;
+			            			break;
 				            			
 				                }
 				                std::cout << "\nWe're about to continue on to checking out row " << curRow << " col " << curCol;
