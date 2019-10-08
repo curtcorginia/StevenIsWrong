@@ -27,17 +27,12 @@ bool checkIfNeighbors(double x1, double y1,
     double d = sqrt(pow(x2 - x1, 2) +  
                 pow(y2 - y1, 2) +  
                 pow(z2 - z1, 2) * 1.0); 
-    std::cout << std::fixed; 
-    std::cout << std::setprecision(2); 
-    std::cout << " Distance is " << d; 
     if(d <= radius)
     {
-    	std::cout << "\nYeah they're neighbors";
     	return true;
     }
     else
     {
-    	std::cout << "\nNot neighbors";
     	return false;
     }
     return false; 
@@ -54,12 +49,10 @@ int main()
     std::istringstream issLineOne(line);
         
     issLineOne >> radius;
-    std::cout << "\nThe radius is " << radius;
     std::getline(infile, line);
     std::istringstream issLineTwo(line);
     
     issLineTwo >> numLocations;
-    std::cout << "\nThere are " << numLocations << " locations";
     std::vector<Coordinate> allCoordinates;
     //Read into a vector, as you have to check the values multiple times
     for(int i = 0; i < numLocations; i++)
@@ -71,7 +64,6 @@ int main()
     	double yVal; 
     	double zVal;
     	coorStream >> coorNum >> xVal >> yVal >> zVal;
-    	std::cout << "\nCoordinate is num" << coorNum << ": xval" << xVal << " yval " << yVal << " zval" << zVal;
     	Coordinate thisCoordinate;
     	thisCoordinate.coorNum = coorNum;
     	thisCoordinate.xVal = xVal;
@@ -79,10 +71,9 @@ int main()
     	thisCoordinate.zVal = zVal;
     	allCoordinates.push_back(thisCoordinate);
     }
-    //std::cout << "\nThe value of check if neighbors on points 1 and 2 is " << checkIfNeighbors(0, 1, 0, 1, 1, 1, 1.0);
 
     //For every coordinate, check everything in the vector except itself to see if it's a neighbor
-
+    int p = 1;
     for(int i = 0; i < numLocations; i++)
     {
     	Coordinate pivotCoordinate = allCoordinates[i]; //I'm calling the coordinate we're comparing to everything the "pivot"
@@ -94,7 +85,6 @@ int main()
     		{
     			
     		    Coordinate neighborCoordinate = allCoordinates[j];
-    		    std::cout << "\nWe're going to compare pivot coordinate " << i << " to potential neighbor " << j;
     		    int pivotNum = allCoordinates[i].coorNum; //it's 1-based, so that's just i + 1
     		    double pivotX = allCoordinates[i].xVal;
     		    double pivotY = allCoordinates[i].yVal;
@@ -106,21 +96,20 @@ int main()
     		    
     		    if(std::abs(pivotX - neighborX)> radius)
     		    {
-    		        std::cout << "\nBREAK EARLY X CASE";	
+    		        //don't bother 
     		    }
     		    else if(std::abs(pivotY - neighborY)> radius)
     		    {
-    		        std::cout << "\nBREAK EARLY Y CASE";	
+    		        //don't bother
     		    }
     		    else if(std::abs(pivotZ - neighborZ)> radius)
     		    {
-    		        std::cout << "\nBREAK EARLY Z CASE";	
+    		        //don't bother
     		    }
 				else
 				{
 	    		    if(checkIfNeighbors(pivotX, pivotY, pivotZ, neighborX, neighborY, neighborZ, radius))
 	    		    {
-	    		    	std::cout << "\nYES, FOR PIVOT " << allCoordinates[i].coorNum << " value " << allCoordinates[j].coorNum<< " is a neighbor";
 	    		        matchList.push_back(allCoordinates[j].coorNum);
 	    		        neighborCount++;
 	    		    }
@@ -131,13 +120,18 @@ int main()
     	    	//keep going, but ignore that one
     	    }
     	}
-    	std::cout << "\n****The thing I want to actually print: Neighbor count: " << neighborCount;
-    	std::cout << "\n***The thing I want to actually print: neighbors:";
+    	
+    	std::cout << "\n#" << p;
+    	std::cout << "["<< neighborCount;
     	for(int x = 0; x < matchList.size(); x++)
     	{
-    		std::cout << " " << matchList[x];
+    		std::cout << "," << matchList[x];
+    		
     	}
+    	p++;
+    	std::cout << "]";
     }
+    std::cout << "]";
 
 
 
