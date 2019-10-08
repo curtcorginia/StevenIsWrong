@@ -186,13 +186,7 @@ int main()
 				            	std::cout << "\nThis is good.  Keep going.";
 				            	
 				                curRow += xArr[dir], curCol += yArr[dir]; //geeksforgeeks line
-				                /*
-				                if(startingRow == curRow && startingCol == curCol) //TODO: Make sure we can go one past
-				            	{
-				            		std::cout << "\nSPECIAL CASE. REJECT.  START AND END COORDINATE IS THE SAME";
-				            		break;
-				            	}
-				            	*/
+				                
 				                std::cout << "\nValue of curRow is " << curRow << " Value of curCol is " << curCol << " i is " << i << " j is " << j;
 				                if(curRow == i && curCol == j)
 				                {
@@ -211,8 +205,22 @@ int main()
 			            			std::cout << "\nMOVE TO THE NEXT WORD!!";
 			            			matchStartRow = startingRow;
 			            			matchStartCol = startingCol;
+			            			/* //I don't know what the heck is wrong with this.  It's still accepting high
+			            			if(matchEndRow == matchStartRow && matchEndCol == matchStartCol)
+				            		{
+				            			std::cout << "\nSPECIAL CASE. REJECT.  START AND END COORDINATE IS THE SAME";
+				            			break;
+				            		}
+				            		*/
 			            			matchEndRow = curRow - xArr[dir];
 			            			matchEndCol = curCol - yArr[dir];
+			            			/*
+			            			if(matchEndRow == curRow && matchEndCol == curCol)
+				            		{
+				            			std::cout << "\nSPECIAL CASE. REJECT.  START AND END COORDINATE IS THE SAME";
+				            			break;
+				            		}
+				            		*/
 			            			wordMatches = true;
 			            			break;
 				            			

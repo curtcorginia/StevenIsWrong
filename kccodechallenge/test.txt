@@ -1,170 +1,206 @@
 
-VALUE OF LINE: WRAP 
-VALUE OF LINE: WRAP
-YOU'RE IN WRAPAROUND MODE
-STARTING CANDIDATE: ROW 1 col 2 letter F
-Touched char B AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-Touched char C AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-About to apply wraparound on row 0 col 3
-Done with wraparound. New value is row 0 col 0
-Touched char A AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-This is good.  Keep going.
-Value of curRow is 1 Value of curCol is 0 i is 1 j is 2
-We're about to continue on to checking out row 1 col 0
-MATCH FOUND.  Size is 3
-STARTING CANDIDATE: ROW 1 col 2 letter F
-About to apply wraparound on row 1 col 3
-Done with wraparound. New value is row 1 col 0
-Touched char D AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-Touched char H AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-Touched char I AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 1 col 2 letter F
-About to apply wraparound on row 2 col 3
-Done with wraparound. New value is row 2 col 0
-Touched char G AND IT'S NOT A MATCH(1,2)(1,0)
-STARTING CANDIDATE: ROW 0 col 2 letter C
-About to apply wraparound on row -1 col 1
-Done with wraparound. New value is row 3 col 1
-Touched char K AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-About to apply wraparound on row -1 col 2
-Done with wraparound. New value is row 3 col 2
-Touched char L AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-About to apply wraparound on row -1 col 3
-Done with wraparound. New value is row 3 col 0
-Touched char J AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-Touched char B AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-About to apply wraparound on row 0 col 3
-Done with wraparound. New value is row 0 col 0
-This is good.  Keep going.
-Value of curRow is 0 Value of curCol is 1 i is 0 j is 2
-We're about to continue on to checking out row 0 col 1
-This is good.  Keep going.
-Value of curRow is 0 Value of curCol is 2 i is 0 j is 2We've reached the starting point of row 0 col 2
-Checking to see if we're done with a wraparound guy
-Value of y: 2
-Value of len: 4
-Word candidate: CAB 
-MOVE TO THE NEXT WORD!!
-STARTING CANDIDATE: ROW 0 col 2 letter C
-Touched char E AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-Touched char F AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 2 letter C
-About to apply wraparound on row 1 col 3
-Done with wraparound. New value is row 1 col 0
-Touched char D AND IT'S NOT A MATCH(0,2)(0,1)
-STARTING CANDIDATE: ROW 0 col 0 letter A
-About to apply wraparound on row -1 col -1
-Done with wraparound. New value is row 3 col 2
-Touched char L AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-About to apply wraparound on row -1 col 0
-Done with wraparound. New value is row 3 col 0
-Touched char J AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-About to apply wraparound on row -1 col 1
-Done with wraparound. New value is row 3 col 1
-Touched char K AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-About to apply wraparound on row 0 col -1
-Done with wraparound. New value is row 0 col 2
-Touched char C AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-Touched char B AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-About to apply wraparound on row 1 col -1
-Done with wraparound. New value is row 1 col 2
-Touched char F AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-Touched char D AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 0 col 0 letter A
-This is good.  Keep going.
-Value of curRow is 2 Value of curCol is 2 i is 0 j is 0
-We're about to continue on to checking out row 2 col 2
-This is good.  Keep going.
-Value of curRow is 3 Value of curCol is 3 i is 0 j is 0
-We're about to continue on to checking out row 3 col 3
-About to apply wraparound on row 3 col 3
-Done with wraparound. New value is row 3 col 0
-This is good.  Keep going.
-Value of curRow is 4 Value of curCol is 1 i is 0 j is 0
-We're about to continue on to checking out row 4 col 1
-About to apply wraparound on row 4 col 1
-Done with wraparound. New value is row 0 col 1
-This is good.  Keep going.
-Value of curRow is 1 Value of curCol is 2 i is 0 j is 0
-We're about to continue on to checking out row 1 col 2
-This is good.  Keep going.
-Value of curRow is 2 Value of curCol is 3 i is 0 j is 0
-We're about to continue on to checking out row 2 col 3
-About to apply wraparound on row 2 col 3
-Done with wraparound. New value is row 2 col 0
-MATCH FOUND.  Size is 7(0,0)(2,0)
-STARTING CANDIDATE: ROW 3 col 2 letter L
-Touched char H AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-Touched char I AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-About to apply wraparound on row 2 col 3
-Done with wraparound. New value is row 2 col 0
-This is good.  Keep going.
-Value of curRow is 1 Value of curCol is 1 i is 3 j is 2
-We're about to continue on to checking out row 1 col 1
-This is good.  Keep going.
-Value of curRow is 0 Value of curCol is 2 i is 3 j is 2
-We're about to continue on to checking out row 0 col 2
-MATCH FOUND.  Size is 4
-STARTING CANDIDATE: ROW 3 col 2 letter L
-Touched char K AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-About to apply wraparound on row 3 col 3
-Done with wraparound. New value is row 3 col 0
-Touched char J AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-About to apply wraparound on row 4 col 1
-Done with wraparound. New value is row 0 col 1
-Touched char B AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-About to apply wraparound on row 4 col 2
-Done with wraparound. New value is row 0 col 2
-Touched char C AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 3 col 2 letter L
-About to apply wraparound on row 4 col 3
-Done with wraparound. New value is row 0 col 0
-Touched char A AND IT'S NOT A MATCH(3,2)(0,2)
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char D AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char E AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char F AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char G AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-This is good.  Keep going.
-Value of curRow is 2 Value of curCol is 3 i is 2 j is 1
-We're about to continue on to checking out row 2 col 3
-About to apply wraparound on row 2 col 3
-Done with wraparound. New value is row 2 col 0
-This is good.  Keep going.
-Value of curRow is 2 Value of curCol is 1 i is 2 j is 1We've reached the starting point of row 2 col 1
-Checking to see if we're done with a wraparound guy
-Value of y: 2
-Value of len: 4
-Word candidate: HIGH
-MOVE TO THE NEXT WORD!!
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char J AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char K AND IT'S NOT A MATCH
-STARTING CANDIDATE: ROW 2 col 1 letter H
-Touched char L AND IT'S NOT A MATCH(2,1)(2,0)
+The radius is 1
+There are 9 locations
+Coordinate is num1: xval0 yval 0 zval500
+Coordinate is num2: xval1 yval 0 zval0
+Coordinate is num3: xval0 yval 1 zval0
+Coordinate is num4: xval0 yval 0 zval1
+Coordinate is num5: xval1 yval 1 zval0
+Coordinate is num6: xval0 yval 1 zval1
+Coordinate is num7: xval1 yval 0 zval1
+Coordinate is num8: xval1 yval 1 zval1
+Coordinate is num9: xval0.5 yval 0.5 zval0.5
+We're going to compare pivot coordinate 0 to potential neighbor 1
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 2
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 3
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 4
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 5
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 6
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 7
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 0 to potential neighbor 8
+BREAK EARLY Z CASE
+****The thing I want to actually print: Neighbor count: 0
+***The thing I want to actually print: neighbors:
+We're going to compare pivot coordinate 1 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 1 to potential neighbor 2 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 1 to potential neighbor 3 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 1 to potential neighbor 4 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 2 value 5 is a neighbor
+We're going to compare pivot coordinate 1 to potential neighbor 5 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 1 to potential neighbor 6 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 2 value 7 is a neighbor
+We're going to compare pivot coordinate 1 to potential neighbor 7 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 1 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 2 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 3
+***The thing I want to actually print: neighbors: 5 7 9
+We're going to compare pivot coordinate 2 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 2 to potential neighbor 1 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 2 to potential neighbor 3 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 2 to potential neighbor 4 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 3 value 5 is a neighbor
+We're going to compare pivot coordinate 2 to potential neighbor 5 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 3 value 6 is a neighbor
+We're going to compare pivot coordinate 2 to potential neighbor 6 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 2 to potential neighbor 7 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 2 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 3 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 3
+***The thing I want to actually print: neighbors: 5 6 9
+We're going to compare pivot coordinate 3 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 3 to potential neighbor 1 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 3 to potential neighbor 2 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 3 to potential neighbor 4 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 3 to potential neighbor 5 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 4 value 6 is a neighbor
+We're going to compare pivot coordinate 3 to potential neighbor 6 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 4 value 7 is a neighbor
+We're going to compare pivot coordinate 3 to potential neighbor 7 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 3 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 4 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 3
+***The thing I want to actually print: neighbors: 6 7 9
+We're going to compare pivot coordinate 4 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 4 to potential neighbor 1 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 5 value 2 is a neighbor
+We're going to compare pivot coordinate 4 to potential neighbor 2 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 5 value 3 is a neighbor
+We're going to compare pivot coordinate 4 to potential neighbor 3 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 4 to potential neighbor 5 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 4 to potential neighbor 6 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 4 to potential neighbor 7 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 5 value 8 is a neighbor
+We're going to compare pivot coordinate 4 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 5 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 4
+***The thing I want to actually print: neighbors: 2 3 8 9
+We're going to compare pivot coordinate 5 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 5 to potential neighbor 1 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 5 to potential neighbor 2 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 6 value 3 is a neighbor
+We're going to compare pivot coordinate 5 to potential neighbor 3 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 6 value 4 is a neighbor
+We're going to compare pivot coordinate 5 to potential neighbor 4 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 5 to potential neighbor 6 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 5 to potential neighbor 7 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 6 value 8 is a neighbor
+We're going to compare pivot coordinate 5 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 6 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 4
+***The thing I want to actually print: neighbors: 3 4 8 9
+We're going to compare pivot coordinate 6 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 6 to potential neighbor 1 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 7 value 2 is a neighbor
+We're going to compare pivot coordinate 6 to potential neighbor 2 Distance is 1.73
+Not neighbors
+We're going to compare pivot coordinate 6 to potential neighbor 3 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 7 value 4 is a neighbor
+We're going to compare pivot coordinate 6 to potential neighbor 4 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 6 to potential neighbor 5 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 6 to potential neighbor 7 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 7 value 8 is a neighbor
+We're going to compare pivot coordinate 6 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 7 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 4
+***The thing I want to actually print: neighbors: 2 4 8 9
+We're going to compare pivot coordinate 7 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 7 to potential neighbor 1 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 7 to potential neighbor 2 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 7 to potential neighbor 3 Distance is 1.41
+Not neighbors
+We're going to compare pivot coordinate 7 to potential neighbor 4 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 8 value 5 is a neighbor
+We're going to compare pivot coordinate 7 to potential neighbor 5 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 8 value 6 is a neighbor
+We're going to compare pivot coordinate 7 to potential neighbor 6 Distance is 1.00
+Yeah they're neighbors
+YES, FOR PIVOT 8 value 7 is a neighbor
+We're going to compare pivot coordinate 7 to potential neighbor 8 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 8 value 9 is a neighbor
+****The thing I want to actually print: Neighbor count: 4
+***The thing I want to actually print: neighbors: 5 6 7 9
+We're going to compare pivot coordinate 8 to potential neighbor 0
+BREAK EARLY Z CASE
+We're going to compare pivot coordinate 8 to potential neighbor 1 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 2 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 2 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 3 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 3 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 4 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 4 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 5 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 5 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 6 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 6 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 7 is a neighbor
+We're going to compare pivot coordinate 8 to potential neighbor 7 Distance is 0.87
+Yeah they're neighbors
+YES, FOR PIVOT 9 value 8 is a neighbor
+****The thing I want to actually print: Neighbor count: 7
+***The thing I want to actually print: neighbors: 2 3 4 5 6 7 8
