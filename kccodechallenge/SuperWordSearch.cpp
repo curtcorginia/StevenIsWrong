@@ -3,12 +3,16 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include <algorithm>
 
 int main()
 {
 	//1. Handle file parsing.  
-    //std::ifstream infile("inputtest1.txt");
-    std::ifstream infile("WRAPAROUND.txt");
+
+	//Three tests I did.  They are the provided no wrap result, the wrap result, and a slightly modified wrap, respectively
+    std::ifstream infile("inputtest1.txt");
+    //std::ifstream infile("WRAPAROUND.txt");
+    //std::ifstream infile("ExtraTest.txt");
     
     std::string line;
     int nRowValue = 0;
@@ -33,26 +37,19 @@ int main()
     //Done filling out the word matrix
     std::getline(infile, line);
     bool isWrapAround = false;
-    std::cout << "\nVALUE OF LINE: " << line;
+    //Accidental whitespaces were driving me crazy; this was to get rid of null and whitespace
     line.erase(std::find(line.begin(), line.end(), '\0'), line.end());
     line.erase(std::find(line.begin(), line.end(), ' '), line.end());
-    std::cout << "\nVALUE OF LINE: " << line;
     if(line == "NO_WRAP")
-    //if(line.at(0) == "N" && line.at(1) == "O")
     {
-    	std::cout << "\nYOU'RE NOT IN WRAPAROUND MODE";
     	isWrapAround = false;
     }
     else if(line == "WRAP")
-    //else if(line.at(0) == "W" && line.at(1) == "R")
     {
-    	std::cout << "\nYOU'RE IN WRAPAROUND MODE";
     	isWrapAround = true;
     }
     else
     {
-    	std::cout << "\nThe value of line is " << line;
-    	std::cout << "\nBad wraparound command";
     	exit(0);
     }
 
@@ -61,9 +58,12 @@ int main()
     std::istringstream issLineSix(line);
     int searchLineNum = 0;
     issLineSix >> searchLineNum;
+    //Put in all the words to search for
     for(int i = 0; i < searchLineNum; i++)
     {
     	std::getline(infile, line);
+    	line.erase(std::find(line.begin(), line.end(), '\0'), line.end());
+        line.erase(std::find(line.begin(), line.end(), ' '), line.end());
     	searchLines.push_back(line);
     }
 
@@ -72,13 +72,15 @@ int main()
 	//ES: I liked the way Geeksforgeeks did this.  Two 1D arrays are used to represent the possible directions
 	//https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
 	//
+	//*Lines taken directly from the source above will say //Geeksforgeeks next to them
+	//
 	//A few differences between their method and mine:
 	//	-I started by finding the first matching letter 
 	//  -I used a vector of words
 	//  -Because of the requirement, I had to also report end index.  Then there was wrap, file parsing, etc...
 
-	int xArr[] = { -1, -1, -1, 0, 0, 1, 1, 1 }; 
-	int yArr[] = { -1, 0, 1, -1, 1, -1, 0, 1 }; 
+	int xArr[] = { -1, -1, -1, 0, 0, 1, 1, 1 }; //Geeksforgeeks
+	int yArr[] = { -1, 0, 1, -1, 1, -1, 0, 1 }; //Geeksforgeeks
 
     int matchStartRow = 0;
     int matchEndRow = 0;
@@ -91,7 +93,6 @@ int main()
 		{
 			for(int j = 0; j < mColValue; j++) //for every column
 			{
-				
 				for(int dir = 0; dir < 8; dir++) //Line from Geeksforgeeks
 				{
 					
@@ -99,7 +100,6 @@ int main()
                     int y = 0; 
     				if(searchLines[x].at(0) == wordMatrix[i][j]) //if the first letter doesn't match, it's not a candidate
     				{
-    					std::cout<< "\nSTARTING CANDIDATE: ROW " << i << " col " << j << " letter " << wordMatrix[i][j];
     					int len = searchLines[x].size();
     					int startingRow = i;
     					int startingCol = j;
@@ -107,138 +107,97 @@ int main()
     					int curCol = j + yArr[dir];
     					//The five lines above are taken from geeksforgeeks (with minor modifications)
     				    //y is for the letter of the word
-    				    for(y = 1; y < len; y++)
+    				    for(y = 1; y < len; y++) //y serves as something like the running length
     				    {
-    				    	
 				            if (curRow >= nRowValue || curRow < 0 || curCol >= mColValue  || curCol < 0) //geeksforgeeks line
 				            {
 				            	if(!isWrapAround)
 				            	{
-				            		std::cout << "\nIT'S NOT WRAP AROUND; BREAK FROM THIS";
 				            		break; 
 				            	}
 				            	
 				            	else
 				            	{	
-                                    std::cout << "\nAbout to apply wraparound on row " << curRow << " col " << curCol;
                                     //Mod formulas
                                     //https://codereview.stackexchange.com/questions/57923/index-into-array-as-if-it-is-circular
 				            		if(curRow >= nRowValue)
 				            		{
-				            			std::cout << "\ncurRow was " << curRow;
 				            			curRow = curRow % nRowValue;
-				            			std::cout << "\ncurRow just wrapped around to " << curRow;
 				            		}
 
 				            		if(curRow < 0)
 				            		{
-				            			std::cout << "\ncurRow was " << curRow;
 				            			curRow = nRowValue + (curRow % nRowValue);
-				            			std::cout << "\ncurRow just wrapped around to " << curRow;
 				            		}
 
 				            		if(curCol >= mColValue)
 				            		{
-				            			std::cout << "\ncurCol was " << curCol;
 				            			curCol = curCol % mColValue;
-				            			std::cout << "\ncurCol just wrapped around to " << curCol;
 				            		}
 
 				            		if(curCol < 0)
 				            		{
-				            			std::cout << "\ncurColwas " << curCol;
 				            			curCol = mColValue + (curCol % mColValue);
-				            			std::cout << "\ncurCol just wrapped around to " << curCol;
-				            		}
-				            		std::cout << "\nDone with wraparound. New value is row " << curRow << " col " << curCol;
-				            		std::cout << "\nAbout to check to see if we wrapped back to the start. i is " << i <<" and j is " << j;
-				            		
+				            		}			            		
 				            	}
-				            	
-				                
 				            }
-				            std::cout << "\nWHERE IS IT EXITING TO? IS IT EXITING TO HERE?";
 				  
 				            // If not matched,  break 
 				            if (wordMatrix[curRow][curCol] != searchLines[x].at(y)) 
 				            {
-				            	std::cout << "\nTouched char " << wordMatrix[curRow][curCol] << " AND IT'S NOT A MATCH";
 				                break; 
 				            }
 				  
 				            //  Moving in particular direction 
 				            if(y + 1 != len)
 				            {
-				            	std::cout << "\nThis is good.  Keep going.";
 				            	
 				                curRow += xArr[dir], curCol += yArr[dir]; //geeksforgeeks line
 				                
-				                std::cout << "\nValue of curRow is " << curRow << " Value of curCol is " << curCol << " i is " << i << " j is " << j;
-				                if(curRow == i && curCol == j) 
+				                if(curRow == i && curCol == j) //We've reached the start again after a wraparound
 				                {
-				                	if(searchLines[x].size() == len) //If size of string equals len, it's the same pos
+				                	if(searchLines[x].size() == len) //If size of string equals len, it's one of the "HIGH Edge Cases"
 				                	{
-				                		std::cout << "\nSAME CHAR BREAK";
 				                		break;
-				                	}
-			            			std::cout << "We've reached the starting point of row " << i << " col " << j; 
-			            			std::cout << "\nWord candidate: " << searchLines[x];
-			            			std::cout << "\nVal of len: " << len;
-			            			std::cout << "\nValue of string size: " << searchLines[x].size();
-			            			std::cout << "\nChecking to see if we're done with a wraparound guy";
-			            			std::cout << "\nValue of y: " << y;
-			            			std::cout << "\nValue of len: " << len;
-			            			
-			            			
+				                	}	      
+				                	//In the wraparound case, the "stopping condition" is reaching the starting point.
+				                	//If this happens, back up by one in whatever direction you came; the one exception
+				                	//is an edge case like the example "HIGH", where you end where you started.  The if
+				                	//above takes care of that edge case      			
 			            			matchStartRow = startingRow;
-			            			matchStartCol = startingCol;
-			            			
-			            			matchEndRow = curRow - xArr[dir];
-			            			matchEndCol = curCol - yArr[dir];
-
-			            			
+			            			matchStartCol = startingCol;	            			
+			            			matchEndRow = curRow - xArr[dir]; //back it up
+			            			matchEndCol = curCol - yArr[dir]; //back it up	         			
 			            			wordMatches = true;
-			            			break;
-				            			
+			            			break;			            			
 				                }
-				                std::cout << "\nWe're about to continue on to checking out row " << curRow << " col " << curCol;
 				            }
-				            if(y + 1 == len)
+				            //This is the "traditional" match case.  We've simplify found the word; we didn't wrap to start
+				            if(y + 1 == len) //Geeksforgeeks
 				            {
-				            	std::cout << "\nMATCH FOUND.  Size is " << len;
 				            	matchStartRow = startingRow;
 				            	matchStartCol = startingCol;
 				            	matchEndRow = curRow;
-				            	matchEndCol = curCol;
-				            	
+				            	matchEndCol = curCol;	            	
 				            	wordMatches = true;
-				            	
 				            	break;
-
 				            }
-
 				            wordMatches = false;
     				    }
-
-			    	}
-			    	
-			    }
-				
+			    	}	
+			    }	
 			}
-			
-			
 		}
+		//At long last, take care of printing
 		if(wordMatches == true)
 		{
+			std::cout << "\n";
 			std::cout << "(" << matchStartRow << "," << matchStartCol << ")(" << matchEndRow << "," << matchEndCol << ")";
 		}
 		else
 		{
 			std::cout << "\nNOT FOUND"; 
 		}
-
 	}
-    
-
 	return 0;
 }

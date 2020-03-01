@@ -5,3 +5,15 @@ Challenge 1:
 *https://www.geeksforgeeks.org/search-a-word-in-a-2d-grid-of-characters/
 
 ^This contained code for a word search without wraparound.  I mentioned in comments which parts were taken from them; they used two 1D arrays of length eight to represent directions, and they "extended" strings in every direction
+
+*https://codereview.stackexchange.com/questions/57923/index-into-array-as-if-it-is-circular
+
+^contained mod formulas
+
+Challenge 2:
+
+*https://www.geeksforgeeks.org/program-to-calculate-distance-between-two-points-in-3-d/
+
+^This contained a C++ implementation of the distance formula
+
+*My corowker, Arie, who did not look at or contribute code but suggested a small optimization on the second challenge 

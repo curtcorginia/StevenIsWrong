@@ -74,6 +74,11 @@ int main()
 
     //For every coordinate, check everything in the vector except itself to see if it's a neighbor
     int p = 1;
+
+    //For better or worse, this is an O(n^2) algorithm that can be best characterized as the brute-force approach.
+    //There is a for loop to count off the match lists, but this operation keeps things at O(n^2).  The early-stage
+    //optimization does help, as candidate neighbors that fall outside of the radius in any one dimension are immediately 
+    //ruled out, but this does not bring the complexity down from O(n^2)
     for(int i = 0; i < numLocations; i++)
     {
     	Coordinate pivotCoordinate = allCoordinates[i]; //I'm calling the coordinate we're comparing to everything the "pivot"
@@ -83,7 +88,6 @@ int main()
     	{
     		if(i != j)
     		{
-    			
     		    Coordinate neighborCoordinate = allCoordinates[j];
     		    int pivotNum = allCoordinates[i].coorNum; //it's 1-based, so that's just i + 1
     		    double pivotX = allCoordinates[i].xVal;
@@ -94,6 +98,16 @@ int main()
     		    double neighborY = allCoordinates[j].yVal;
     		    double neighborZ = allCoordinates[j].zVal;
     		    
+                /*
+					I discussed potential optimizations with a coworker; he didn't have a chance to look at the code
+				or suggest any of his own, but he did come up with a "short-circuiting" technique that I liked.  A 
+				candidate point with a radius can be thought of as a sphere.  There is a "box" of length/width/height x,
+				where x is the longest length, that completely encompasses the sphere.
+					So if you've already ruled out the two points as not being in the same box, then there's no need
+				to compare the spheres!  If any one of the three dimensions is already outside of the radius, then there's
+				no need to dig deeper and run the actual check neighbors equation.
+                */
+
     		    if(std::abs(pivotX - neighborX)> radius)
     		    {
     		        //don't bother 
@@ -132,8 +146,5 @@ int main()
     	std::cout << "]";
     }
     std::cout << "]";
-
-
-
 	return 0;
 }
