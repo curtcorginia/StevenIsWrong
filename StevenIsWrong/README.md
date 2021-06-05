@@ -1,20 +1,21 @@
 # Introduction
 
-Arguing with Steven is not like a well-executed chess match, but more like the act of trying to fight a monkey that constantly lobs wet chunks of his own shit at you.  The monkey is not using strategy.  The monkey is not planning out exactly how it will go about ruining your day.  No, the monkey throws shit, and if that doesn't annoy you then it will lob more shit. 
+Here are a few things Steven has done in past conversations:
 
-Among the extraordinarly stupid, ignorant, braindead arguments Steven has formulated, not so much out of genuine belief but for the sole purpose of pissing me off, Steven has:
+* Called me a Bernie Sanders supporter three times in front of everyone, even though I am not, when he is the one who voted for him twice...including in the election when Bernie was not actually running.
+* Compared himself to Ken Thompson, and the invention of Unix to his own work at Northrop Grumman
+* Stated that his sole reason for disliking a book was that I liked it, which was such a dick move even Scott took issue
+* Said that custard tarts are overrated
+* He has stated that the Domino Theory was correct
 
-* Stated that the United States involvement in the Vietman War is the reason the Soviet Union collapsed
-* Compared himself to Ken Thompson and the invention of Unix to three weeks of himself working at Northrop Grumman
-* Stated that without United States involvement, Israel would cease to exist
-* Equated democracy with succession 
-* Claimed that Domino Theory was correct
+I could write a book about how these kinds of statements do not constitute intellectual discourse, and are less analogous to a well-executed chess game than to trying a fight a monkey that constantly lobs its own shit at you (in fact, if you look at my commit history, I already did). But let us just assume, for the sake of not wasting 50 pages arguing that Steven is a douche bag, that his last set of arguments were made in good faith.  We will address them in this regard:
 
-Some of these arguments actually sound legitimate, until you realize they are completely wrong and likely made up on the spot in order to push along some sort of argument that was already going nowhere.  Let me emphasize that these were not made in a good faith attempt to perpetuate actual discourse, but to make up knee-jerk patty cake bullshit with an audience of a single person who agreed with him for the primary purpose of laughing condescendingly. One may suggest that Gorbachev's decision to allow elections and democratize caused the collapse of the Soviet Union, which is a pretty good segue into the argument that a democratic election is the equivalent of allowing a town that disagrees with the United States government to succeed.  The Domino Theory may possess some merit, albeit completely incorrect merit overshadowed by the fact that the exact opposite took place, but that's not how these conversations go.  No, because of the level of stupidity we are now forced to grapple with, we're going to have to respond to the argument that without us, full confidence, Israel would not exist.  Maybe we should use nuance in how we analyze this.  Maybe we should do research.  Nah.  Screw it.  Let's read 16 pages of a book instead before derailing into some incoherent shitposting.
+* He has stated that the United States involvement in the Vietnam War is the reason the Soviet Union collapsed
+* He has stated that without United States involvement, Israel would cease to exist and that its population of nine million would die
+* He has stated that, had it not been for nuclear brinksmanship, the Soviet Union would have conquered Europe in its entirety 
+* He has equated democracy with succession 
+* He has claimed that Domino Theory was correct
 
-These arguments above, including a little dash of self-important delusion, are really only the tip of the iceberg that is talking to Steven.  In fact, his entire strategy for carrying out discussion can be summarized by opening meme, intermediate contradiction by vague hypothetical and unsupported fact, and closing statement of realizing nothing he just said actually makes sense.
+The key thesis was that United States hegemony has saved lives, which could have been a compelling (albeit vague) topic of discourse.  Maybe he could have opened with a nuanced take on foreign policy with regard to the Soviet Union in the aftermath of the second World War - instead I am going to have to argue that the Vietnam War is not the reason for their dissolution, an argument so blatantly wrong that I am not convinced it was made seriously.  He could have reflected on the tense conflict and proxy wars between the United States and Soviet Union superpowers, but instead I have to explain why the Soviet Union would not have completely conquered Europe and then carried out a Great Purge on its population.  Maybe he could have continued with his own historical perspective on China, from the dynasties to the rise of communism, and fluidly expanded on how their crimes and aggression led us to the most recent situation today - instead I am going to have to argue against Domino Theory.  Maybe he also could have touched on the complex situation in Israel, with its many sides and millenia long past, but instead I am going to have to argue that Israel would not cease to exist without United States involvement, and that its inhabitants would promptly die.  These are, perhaps, extremely complex topics that should be discussed thoughtfully and with research; but no, instead we are throwing around extremes without backing, supporting them with flimsy hypotheticals, and doing so in the audience of someone who already agreed.  If there is anything I have learned so far, it is that the way to bridge this country's divide is by laughing at opinions we disagree with as if they were the stupidest things we have ever heard, then sending them memes.   This is the situation we are now in, so I may as well get started.
 
- 
-
-He has also called me a Bernie Sanders supporter three times in front of everyone, even though I am not, when he is the one who voted for him twice...including in the election when Bernie was not actually running.  He has called custard tarts overrated.  He has said, and I quote, "I am just shitting on that book because Evan likes it" with regard to a meaningless self-help bookyou can buy on Kindle for $1.  
 
