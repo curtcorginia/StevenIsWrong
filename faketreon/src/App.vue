@@ -1,7 +1,9 @@
 <template>
+
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Faketreon msg="Welcome to Your Vue.js App"/>
+    
+    <Faketreon msg=""/>
+    
   </div>
 </template>
 
