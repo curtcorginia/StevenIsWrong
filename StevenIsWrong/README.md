@@ -43,6 +43,8 @@ I think this segues pretty well into the most problematic argument made thus far
 
 Gosh, that title text was a mouthful.  I believe the direct quote was something like, "Why should we care what they think?  We might as well ask the people in Guantanamo Bay think.  They don't know what's best for them."
 
+# Works Cited
+
 [1] Harrington, John, and Grant Suneson. “What Were the 13 Most Expensive Wars in U.S. History?” USA Today, Gannett Satellite Information Network, 13 June 2019, www.usatoday.com/story/money/2019/06/13/cost-of-war-13-most-expensive-wars-in-us-history/39556983/. 
 
 [2] The Costs of Soviet Involvement in Afghanistan. Directorate of Intelligence. Langley, United States. Feb. 1987. Page 4.
